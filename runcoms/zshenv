@@ -9,3 +9,12 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+# braincraft specific
+export PERL5LIB=/srv/kfzteile24/lib/perl"${PERL5LIB:+:$PERL5LIB}"
+export PERL5LIB=/srv/kfzteile24-dbrw/lib/perl"${PERL5LIB:+:$PERL5LIB}"
+export DEV_MODE=1
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export EDITOR=nvim
+export VISUAL=nvim
+export TERM=screen-256color
